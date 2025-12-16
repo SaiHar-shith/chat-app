@@ -4,7 +4,7 @@ import EmojiPicker from "emoji-picker-react";
 import Sentiment from "sentiment";
 import "./App.css";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://chat-app-backend-madn.onrender.com");
 const sentiment = new Sentiment();
 
 const servers = {
