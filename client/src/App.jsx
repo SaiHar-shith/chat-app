@@ -99,9 +99,9 @@ function App() {
     if (username !== "" && room !== "" && password !== "") {
       try {
         const finalAvatarData = customAvatar ? customAvatar : (isRobot ? `bottts:${avatarSeed}` : `avataaars:${avatarSeed}`);
-        const response = await fetch("http://localhost:3001/login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
+        const response = await fetch("https://chat-app-backend-madn.onrender.com/login", {
+        method: "POST",
+         headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username, password, avatar_seed: finalAvatarData }),
         });
         const result = await response.json();
